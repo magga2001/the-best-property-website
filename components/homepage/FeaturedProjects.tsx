@@ -41,30 +41,6 @@ const FeaturedProjects: React.FC = () => {
       type: t.projects.propertyTypes.modernTownhome,
       gradient: "from-cyan-500 to-blue-600",
     },
-    {
-      id: 4,
-      title: "The Best Lamlukka Klong 6",
-      location: "Lamlukka Klong 6, Pathum Thani",
-      priceRange: "฿3.2M - ฿5.0M",
-      type: t.projects.propertyTypes.singleHouse,
-      gradient: "from-orange-500 to-red-600",
-    },
-    {
-      id: 5,
-      title: "The Best Lamlukka Klong 8",
-      location: "Lamlukka Klong 8, Pathum Thani",
-      priceRange: "฿3.8M - ฿5.5M",
-      type: t.projects.propertyTypes.modernLiving,
-      gradient: "from-green-500 to-emerald-600",
-    },
-    {
-      id: 6,
-      title: "The Best Premium",
-      location: "Central Bangkok",
-      priceRange: "฿5.5M - ฿8.0M",
-      type: t.projects.propertyTypes.exclusiveHouse,
-      gradient: "from-indigo-500 to-purple-600",
-    },
   ];
 
   return (
