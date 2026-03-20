@@ -220,7 +220,7 @@ export const relatedPropertiesQuery = groq`*[_type == "property" && defined(slug
 }`;
 
 // Get all house types for a property
-export const houseTypesByPropertyQuery = groq`*[_type == "houseType" && property._ref == $propertyId] | order(price asc) {
+export const houseTypesByPropertyQuery = groq`*[_type == "houseType" && property._ref == $propertyId] | order(name asc) {
   _id,
   name,
   slug,

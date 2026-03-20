@@ -4,6 +4,7 @@ import { urlFor } from "@/src/sanity/lib/image";
 import Link from "next/link";
 import Image from "next/image";
 import { PortableTextRenderer } from "@/components/common/PortableTextRenderer";
+import FloorPlanViewer from "@/components/property/FloorPlanViewer";
 import { notFound } from "next/navigation";
 import { groq } from "next-sanity";
 
@@ -294,28 +295,7 @@ export default async function HouseTypeDetailPage({
 
               {/* Floor Plans */}
               {houseType.floorPlans && houseType.floorPlans.length > 0 && (
-                <div className="mb-12">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-6">Floor Plans</h3>
-                  <div className="space-y-6">
-                    {houseType.floorPlans.map((plan, index) => (
-                      <div key={index} className="relative rounded-xl overflow-hidden bg-white shadow-lg">
-                        {plan.title && (
-                          <div className="p-4 bg-slate-100 border-b border-slate-200">
-                            <h4 className="font-semibold text-slate-900">{plan.title}</h4>
-                          </div>
-                        )}
-                        <div className="relative h-96">
-                          <Image
-                            src={urlFor(plan).width(1200).height(800).url()}
-                            alt={plan.alt || plan.title || `Floor plan ${index + 1}`}
-                            fill
-                            className="object-contain p-4"
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <FloorPlanViewer floorPlans={houseType.floorPlans} />
               )}
             </div>
 
